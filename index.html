@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOCYCLING</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilo do menu lateral */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        /* Links dentro do menu lateral */
+        .sidebar button {
+            padding: 6px 6px 6px 32px;
+            text-align: left;
+            font-size: 25px;
+            color: #818181;
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar button:hover {
+            color: #f1f1f1;
+        }
+
+        /* Ícone para abrir/fechar o menu lateral */
+        .open-btn {
+            font-size: 20px;
+            color: #111;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+
+        /* Estilo do conteúdo principal */
+        .content {
+            transition: margin-left 0.5s;
+            padding: 5px;
+        }
+
+        /* Ocultar as seções de conteúdo inicialmente */
+        .content-section {
+            display: none;
+        }
+
+        /* Quando o menu lateral está aberto */
+        .sidebar.open {
+            width: 130px;
+        }
+
+        /* Estilo de quando o conteúdo é empurrado */
+        .content.open {
+            margin-left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>ECOCYCLING</h1>
+    </header>
+
+    <!-- Ícone para abrir/fechar o menu lateral -->
+    <span class="open-btn" onclick="toggleMenu()">&#9776;</span>
+
+    <!-- Menu Lateral -->
+    <div class="sidebar" id="mySidebar">
+        <button onclick="showContent('introducao')">Resumo do negócio</button>
+        <button onclick="showContent('problema')">Problema</button>
+        <button onclick="showContent('solucao')">Proposta de solução</button>
+        <button onclick="showContent('publico')">Público-Alvo</button>
+        <button onclick="showContent('valor')">Proposta de Valor</button>
+        <button onclick="showContent('dados')">Dados do estudantes</button>
+        <button onclick="showContent('mercado')">Análise de Mercado</button>
+        <button onclick="showContent('mvp')">MVP</button>
+        <button onclick="showContent('marketing')">Proposta de Marketing</button>
+        <button onclick="showContent('financeira')">Proposta Financeira</button>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="content" id="mainContent">
+        <div id="introducao" class="content-section">
+            <h3>Resumo do negócio</h3>
+            <p>O projeto empreendedor ECOCYCLING consiste em vender sementes de árvores nativas ou em extinção do ecossistema local. As pessoas que adquirirem essas sementes e as cultivarem até formarem mudas poderão vendê-las para a nossa empresa ou diretamente para consumidores locais, promovendo a preservação da biodiversidade e estimulando a sustentabilidade ambiental. </p>
+        </div>
+
+        <div id="problema" class="content-section">
+            <h3>Problema</h3>
+            <p>O problema enfrentado pela ECOCYCLING são os impactos causados pelas ações antrópicas no ambiente, como o desmatamento e a degradação dos ecossistemas. Essas ações humanas afetam a biodiversidade, o equilíbrio ecológico e a saúde dos ecossistemas locais.
+
+            </p>
+        </div>
+
+        <div id="solucao" class="content-section">
+            <h3>Proposta de solução</h3>
+            <p>A ECOCYCLING propõe incentivar a comunidade local a replantar árvores nativas e em extinção, além de ampliar a coleta e reutilização de recicláveis. Essas ações visam colaborar com a preservação do meio ambiente e minimizar os impactos ambientais causados pelas atividades humanas, promovendo um futuro mais sustentável.
+
+            </p>
+        </div>
+
+        <div id="publico" class="content-section">
+            <h3>Público-Alvo</h3>
+            <p>O público-alvo da ECOCYCLING abrange pessoas de todas as faixas etárias. O objetivo é envolver a comunidade local de maneira inclusiva, permitindo que todos participem ativamente do cultivo das sementes e da preservação do meio ambiente.
+
+            </p>
+        </div>
+
+        <div id="valor" class="content-section">
+            <h3>Proposta de Valor</h3>
+            <p>A proposta de valor da ECOCYCLING é que os clientes adquiram sementes de árvores nativas e as plantem, contribuindo diretamente para a recuperação e preservação da biodiversidade local. Dessa forma, o público-alvo participa ativamente da solução para a sustentabilidade ambiental.
+
+            </p>
+        </div>
+
+        <div id="dados" class="content-section">
+            <h3>Dados dos estudantes</h3>
+            <p> Cledison- Criou o site e ajudou o restante do grupo para adicionar as informaçôes no site. <br> <br>
+                Heloisa Manera- Pesquisou as informações e as imagens com a ajuda do restante do grupo, contribuiu com as ideias gerada pelo grupo para a criação do nosso empreendedorismo. <br> <br>
+                Alberty- Também ajudou na pesquisa de informações e imagens e deu a ideia do nome, contribuiu com as ideias gerada pelo grupo para a criação do nosso empreendedorismo.
+            </p>
+        </div>
+
+        <div id="mercado" class="content-section">
+            <h3>Análise de Mercado</h3>
+            <p>O mercado de reciclagem e sustentabilidade tem mostrado um crescimento contínuo, com uma demanda crescente por soluções inovadoras e eficazes na gestão de resíduos e preservação ambiental. A ECOCYCLING se posiciona nesse mercado, oferecendo produtos e serviços voltados para a sustentabilidade e educação ambiental.
+
+            </p>
+        </div>
+
+        <div id="mvp" class="content-section">
+            <h3>MVP</h3>
+            <p>A ECOCYCLING iniciou suas atividades com um Produto Mínimo Viável (MVP), oferecendo serviços de coleta seletiva para empresas e residências. Esse MVP tem como objetivo testar a aceitação do público e a eficiência de suas soluções de reciclagem e educação ambiental no mercado local.
+
+            </p>
+        </div>
+
+        <div id="marketing" class="content-section">
+            <h3>Proposta de Marketing</h3>
+            <p>A ECOCYCLING planeja expandir sua conscientização ambiental através de campanhas educacionais, parcerias com empresas e um forte foco digital. A empresa conta com um site de vendas onde os clientes podem adquirir sementes de árvores nativas e em extinção, contribuindo diretamente para a preservação do ecossistema local. No site, os consumidores podem acessar informações detalhadas sobre as espécies de sementes disponíveis, aprender sobre os benefícios de plantar árvores nativas e obter orientações sobre o cultivo dessas mudas.
+
+                O site também serve como uma plataforma educativa, promovendo práticas sustentáveis, como reciclagem e replantio de árvores. Além de facilitar a compra online, a plataforma oferece recursos interativos, como tutoriais e vídeos explicativos sobre o processo de cultivo das sementes adquiridas. A ECOCYCLING usará seu site para promover campanhas de conscientização, com o objetivo de engajar o público em ações práticas de preservação ambiental e estimular a participação ativa na regeneração das florestas locais.
+                
+                Agora a Proposta de Marketing destaca o papel do site não apenas como uma plataforma educativa, mas também como um canal de vendas para as sementes das árvores, reforçando sua funcionalidade como uma ferramenta importante para a comercialização e promoção de práticas sustentáveis. Se precisar de mais ajustes, estou à disposição!
+                
+                
+                
+                </p>
+        </div>
+
+        <div id="financeira" class="content-section">
+            <h3>Proposta Financeira</h3>
+            <p>A proposta financeira da ECOCYCLING visa atrair investimentos para expandir suas operações e aumentar a infraestrutura necessária para lidar com maiores volumes de resíduos recicláveis. O objetivo é aprimorar as operações de coleta, processamento e comercialização, além de ampliar os recursos para a educação ambiental e preservação do meio ambiente.
+
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Função para mostrar uma seção do conteúdo e esconder as outras
+        function showContent(id) {
+            // Oculta todas as seções
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';  // Esconde a seção
+            });
+
+            // Exibe a seção correspondente
+            const section = document.getElementById(id);
+            if (section) {
+                section.style.display = 'block';  // Exibe a seção correspondente
+            }
+
+            // Fecha o menu lateral após clicar
+            toggleMenu();
+        }
+
+        // Exibe a primeira seção por padrão ao carregar a página
+        window.onload = () => showContent('introducao');
+
+        // Função para alternar o menu lateral
+        function toggleMenu() {
+            const sidebar = document.getElementById("mySidebar");
+            const content = document.getElementById("mainContent");
+
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";  // Fecha o menu
+                content.style.marginLeft = "0";  // O conteúdo ocupa toda a largura
+            } else {
+                sidebar.style.width = "250px";  // Abre o menu
+                content.style.marginLeft = "250px";  // O conteúdo é empurrado para a direita
+            }
+        }
+    </script>
+</body>
+
+</html>

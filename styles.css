@@ -1,0 +1,136 @@
+/* Reset básico para garantir que estilos sejam consistentes entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definir uma fonte padrão */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Ícone para abrir/fechar o menu lateral */
+.open-btn {
+    font-size: 30px;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Estilo do menu lateral */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+/* Estilo dos botões do menu */
+.sidebar button {
+    padding: 8px 8px 8px 32px;
+    text-align: left;
+    font-size: 25px;
+    color: #818181;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Estilo quando o botão do menu é pressionado */
+.sidebar button:hover {
+    color: #f1f1f1;
+    background-color: #4CAF50;
+}
+
+/* Conteúdo principal */
+.content {
+    transition: margin-left 0.5s;
+    padding: 20px;
+    margin-left: 0;
+}
+
+/* Seções de conteúdo */
+.content-section {
+    display: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do título das seções */
+.content-section h3 {
+    color: #4CAF50;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Estilo de parágrafos e listas dentro das seções */
+.content-section p, .content-section ul, .content-section ol {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Quando o menu lateral está aberto */
+.sidebar.open {
+    width: 250px;
+}
+
+/* Estilo do conteúdo quando o menu lateral está aberto */
+.content.open {
+    margin-left: 250px;
+}
+
+/* Estilo do link do botão de abertura */
+.open-btn {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Estilo responsivo para dispositivos menores */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        padding-top: 50px;
+    }
+
+    .sidebar.open {
+        width: 100%;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .content-section {
+        padding: 15px;
+    }
+}
